@@ -2,10 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
-import reducers from './reducers';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import reduxThunk from 'redux-thunk';
+import reducers from './reducers';
 
-const createStoreWithMiddleware = applyMiddleware()(compose((window.devToolsExtension ? window.devToolsExtension() : f => f)(createStore)));
+const createStoreWithMiddleware = applyMiddleware(reduxThunk)(compose((window.devToolsExtension ? window.devToolsExtension() : f => f)(createStore)));
 
 import './style/main.scss';
 
