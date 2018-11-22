@@ -7,13 +7,22 @@ class TabNav extends Component {
                 <div className="tab-nav__tabs">
                     {
                         this.props.tabs.map((tab, index) => {
-                            return <a className="tab-nav__tab">{tab.title}</a>
+                            return <a key={index} onClick={() => this.props.handleClick(tab.title)} className="tab-nav__tab">{tab.title}</a>
                         })
                     }
                 </div>
-                <div>
-                    requests or newsletter content goes here
-                </div>
+
+                {
+                    this.props.tabs.map((tab, index) => {
+                        if (tab.active) {
+                            return (
+                                <div key={index} className="tab-nav__component">
+                                    {tab.component}
+                                </div>
+                            )
+                        }
+                    })
+                }
             </div>
         )
     }
