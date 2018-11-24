@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TabNav from './tabNav';
+import NewsletterGrid from './newsletter/newsletterGrid';
 
 class Dashboard extends Component {
     constructor(props) {
@@ -9,8 +10,8 @@ class Dashboard extends Component {
             tabs: [
                 {
                     title: 'Newsletter',
-                    active: false,
-                    component: <h4>Newsletter</h4>
+                    active: true,
+                    component: <NewsletterGrid />
                 },
                 {
                     title: 'Requests',
