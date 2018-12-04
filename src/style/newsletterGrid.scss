@@ -2,5 +2,5 @@
     grid-row: content-s/content-e;
     display: grid;
     grid-template-rows: [s box-s] 16rem [box-e archive-s] 1fr [archive-e a];
-    grid-template-columns: [box-s archive-s] 16rem [box-e newsletter-s] 1fr [newsletter-e];
+    grid-template-columns: [box-s archive-s] 16rem [box-e archive-e newsletter-s] 1fr [newsletter-e];
 }
